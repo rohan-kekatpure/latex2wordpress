@@ -15,7 +15,7 @@ The converter consists of two Python files ```latex2wordpress.py``` and ```main.
 
 
 <ul>
-<li>Go to the folder with your latex source and compile your LaTeX source twice. Theere should be a .aux 
+<li>Go to the folder with your latex source and compile your LaTeX source twice. There should be a .aux 
 file in the LaTeX source folder </li>
 <li>Download the two Python files and place them in any directory</li>
 <li>Invoke the LaTeX to Wordpress converter as follows: </li>
