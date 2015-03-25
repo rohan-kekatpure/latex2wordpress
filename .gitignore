@@ -1,0 +1,8 @@
+*.aux
+*.tex
+*.log
+*.pdf
+*.html
+*.out
+**pyc**
+**idea**
