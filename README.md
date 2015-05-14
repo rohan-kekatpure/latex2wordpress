@@ -22,7 +22,7 @@ The converter consists of two Python files ```latex2wordpress.py``` and ```main.
 
  ```python l2wp.py latexfile.tex latexfile.aux```
 
- If `l2wp.py`
+ If `l2wp.py` is not in your path, then you have to provide complete path to it. 
 
 The Wordpress-ready file would be available as ```latexfilename_wordpress.tex``` 
 
