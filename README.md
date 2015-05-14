@@ -11,16 +11,16 @@ The core logic involves extracting various LaTeX tags and replacing or wrapping 
 wordpress. The converter can be extended by adding methods for processing of additional tags. 
 
 ### Usage
-The converter consists of two Python files ```latex2wordpress.py``` and ```main.py```. 
+The converter consists of two Python files `latex2wordpress.py` and `main.py`. 
 
  1. Download the two Python files and place them in any directory
 
  2. Go to the folder with your latex source and compile your LaTeX source twice. This should 
- generate a ```.aux``` file in the LaTeX source folder
+ generate a `.aux` file in the LaTeX source folder
  
  3. Invoke the LaTeX to Wordpress converter:
 
- ```python l2wp.py latexfile.tex latexfile.aux```
+ `python l2wp.py latexfile.tex latexfile.aux`
 
  If `l2wp.py` is not in your path, then you have to provide complete path to it. 
 
