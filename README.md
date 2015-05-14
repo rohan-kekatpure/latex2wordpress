@@ -1,4 +1,4 @@
-### latex2wordpress: Convert your LaTeX documents for copy-pasting into Wordpress
+### latex2wordpress: Make your LaTeX docs Wordpress-ready
 
 Posting LaTeX content to Wordpress is a hassle. Even with existing (January 2015) LaTeX support on Wordpress, 
 LaTeX content needs to be hand-modified to conform to Wordpress format. Additionally
