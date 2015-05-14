@@ -1,30 +1,30 @@
-<h3>latex2wordpress</h3>
+### latex2wordpress: Convert your LaTeX documents for copy-pasting into Wordpress
 
 Posting LaTeX content to Wordpress is a hassle. Even with existing (January 2015) LaTeX support on Wordpress, 
 LaTeX content needs to be hand-modified to conform to Wordpress format. Additionally
 there is no support for LaTeX labels and references. They need to be inserted by hand. 
 If an equation or a reference is added in the text, all the subsequent numbering changes need to performed
-manually. The process is manual and unscalable. 
+manually. The process is manual and unscalable for larger documents. 
 
-This small project is a tool in converting my LaTeX compositions to a format suitable for copy-pasting to Wordpress. 
+```latextowordpress``` is a tool for converting LaTeX compositions to a format suitable for copy-pasting to Wordpress. 
 The core logic involves extracting various LaTeX tags and replacing or wrapping them with HTML so they are acceptable to 
 wordpress. The converter can be extended by adding methods for processing of additional tags. 
 
-<h4>How to use</h4>
+### Usage
 The converter consists of two Python files ```latex2wordpress.py``` and ```main.py```. 
 
+ 1. Download the two Python files and place them in any directory
 
-<ul>
-<li>Go to the folder with your latex source and compile your LaTeX source twice. There should be a .aux 
-file in the LaTeX source folder </li>
-<li>Download the two Python files and place them in any directory</li>
-<li>Invoke the LaTeX to Wordpress converter as follows: </li>
-</ul>
-```python main.py path/to/latexfile.tex path/to/auxfile.aux```
-<ul>
-<li> The Wordpress-ready file would be available as latexfilename_wordpress.tex </li>
-</ul>
+ 2. Go to the folder with your latex source and compile your LaTeX source twice. This should 
+ generate a ```.aux``` file in the LaTeX source folder
+ 
+ 3. Invoke the LaTeX to Wordpress converter:
 
+ ```python /path/to/l2wp.py /path/to/latexfile.tex path/to/latexfile.aux```
+
+The Wordpress-ready file would be available as ```latexfilename_wordpress.tex``` 
+
+### Rules for composing LaTeX files for accurate conversion to wordpress format
 
 
 <!--Custom LaTeX to Wordpress converters <a href="https://lucatrevisan.wordpress.com/latex-to-wordpress/">exist</a>. 

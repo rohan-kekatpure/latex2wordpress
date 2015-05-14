@@ -102,7 +102,7 @@ class Converter(object):
         align} in HTML tags. It returns the HTML-ized equation string with equation
         number.
         @param matchobj: matchobject passed to this function by re.sub()
-        @return: Wordpress-compatible HML-ized equation string
+        @return: Wordpress-compatible HTML-ized equation string
         """
         align_string = matchobj.group(0)
 
@@ -137,21 +137,24 @@ class Converter(object):
         @return:
         @TODO: Refactor this to remove explicit hardcoding of reference types.
         """
-        if reftype == "myeqno":
-            refpattern = r"\\myeqno\s*\{\s*([\s\S]*?)\s*\}"
-        elif reftype == "eqref":
-            refpattern = r"\\eqref\s*\{\s*([\s\S]*?)\s*\}"
-
+        # if reftype == "myeqno":
+        #     refpattern = r"\\myeqno\s*\{\s*([\s\S]*?)\s*\}"
+        # elif reftype == "eqref":
+        #     refpattern = r"\\eqref\s*\{\s*([\s\S]*?)\s*\}"
+    
+        refpattern = r"\\%s\s*\{\s*([\s\S]*?)\s*\}" % reftype
+        
         def processref(matchobj):
             reftag = matchobj.group(0)
             labelstring = re.findall(refpattern, reftag)[0]
-            return re.sub(refpattern, "Eq. (%s)" % self.labelmap[labelstring], reftag)
+            prefix = "Eq. " if reftype == "myeqno" else ""
+            return re.sub(refpattern, "%s(%s)" % (prefix, self.labelmap[labelstring]), reftag)
         return processref
 
     @staticmethod
     def _escape_special(s):
         """
-        If s contains escape sequesces, then properly escapes them. For
+        If s contains escape sequences, then properly escapes them. For
         example, "\text" is converted to "\\text"
         @return: String with properly escaped special characters
         """
