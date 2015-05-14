@@ -37,8 +37,8 @@ then you need to adhere to the following guidelines:
 
  1. Every equation you want numbered should be explicitly labeled with `\label{...}`. Else you 
  should append every un-numbered equation by `\nonumber` 
- 2. The `\label{...}` should appear _after_ the equation like so:
- 
+ 2. The `\label{...}` should appear _after_ the equation content and just before `\end{equation}` like so:
+
  ```latex
  	\begin{equation}
  	E = mc^2
