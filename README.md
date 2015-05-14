@@ -20,7 +20,9 @@ The converter consists of two Python files `latex2wordpress.py` and `main.py`.
  
  3. Invoke the LaTeX to Wordpress converter:
 
- `python l2wp.py latexfile.tex latexfile.aux`
+ ```
+ 	$ python l2wp.py latexfile.tex latexfile.aux
+ ```
 
  If `l2wp.py` is not in your path, then you have to provide complete path to it. 
 
