@@ -26,11 +26,22 @@ The converter consists of two Python files `latex2wordpress.py` and `main.py`.
 
  If `l2wp.py` is not in your path, then you have to provide complete path to it. 
 
-The Wordpress-ready file would be available as ```latexfilename_wordpress.tex``` 
+ The Wordpress-ready file would be available as ```latexfilename_wordpress.tex``` 
 
 
-### Rules for composing LaTeX files for accurate conversion to wordpress format
+### Composing LaTeX source for conversion to wordpress format
 
+For the most part, `l2wp` dows not pose any restrictions on your latex formatting style. However, 
+if you care about faithfully transferring equation numbering from your LaTeX source to Wordpress, 
+then you need to adhere to the following guidelines:
 
-<!--Custom LaTeX to Wordpress converters <a href="https://lucatrevisan.wordpress.com/latex-to-wordpress/">exist</a>. 
-These are applicable to mathematical publishing and nicely deals with -->
+ 1. Every equation you want numbered should be explicitly labeled with `\label{...}`. Else you 
+ should append every un-numbered equation by `\nonumber` 
+ 2. The `\label{...}` should appear _after_ the equation like so:
+ 
+ ```latex
+ 	\begin{equation}
+ 	E = mc^2
+ 	\label{massenergy}
+ 	\end{equation}
+ ```
