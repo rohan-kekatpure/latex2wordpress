@@ -1,4 +1,4 @@
-### latex2wordpress: Make your LaTeX docs Wordpress-ready
+#### `latex2wordpress`: Make your LaTeX docs Wordpress-ready
 
 Posting LaTeX content to Wordpress is a hassle. Even with existing (January 2015) LaTeX support on Wordpress, 
 LaTeX content needs to be hand-modified to conform to Wordpress format. Additionally
@@ -10,7 +10,7 @@ manually. The process is manual and unscalable for larger documents.
 The core logic involves extracting various LaTeX tags and replacing or wrapping them with HTML so they are acceptable to 
 wordpress. The converter can be extended by adding methods for processing of additional tags. 
 
-### Usage
+#### Usage
 The converter consists of two Python files `latex2wordpress.py` and `main.py`. 
 
  1. Download the two Python files and place them in any directory
@@ -29,7 +29,7 @@ The converter consists of two Python files `latex2wordpress.py` and `main.py`.
  The Wordpress-ready file would be available as ```latexfilename_wordpress.tex``` 
 
 
-### Composing LaTeX source for conversion to wordpress format
+#### Composing LaTeX source for conversion to wordpress format
 
 For the most part, `l2wp` dows not pose any restrictions on your latex formatting style. However, 
 if you care about faithfully transferring equation numbering from your LaTeX source to Wordpress, 
